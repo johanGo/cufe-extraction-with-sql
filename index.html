@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="imgs/file-earmark-arrow-up.svg" type="image/x-icon">
+	<link rel="stylesheet" href="styles.css">
+	<title>Cufe's Extraction</title>
+</head>
+<body>
+	<!-- <p>00:00</p>	 -->
+	<div class="containerForm">
+		<label for="archivoXML">
+			<img class="imgLoad" src="imgs/file-earmark-arrow-up.svg" alt="imagen de subir un archivo">
+			<p class="text">Cargar XML</p>
+		</label>
+		<input  type="file" id="archivoXML" multiple >
+	</div>
+
+	<table class="table">
+		<tr class="firstRow">
+			<th>Nombre del Proveedor</th>
+			<th>Cufe</th>
+		</tr>
+		<form action="/send" method="post" id="myForm" class="suu">			
+			<td>
+                <input id="nameProvider" type="text" name="provider" required readonly>
+            </td>
+			<td >
+                <input id="cufeProvider" type="text" name="number" value="" required readonly>
+            </td>
+			<td style="display: none;" class="codeProvider">
+				<input id="codeProvider" name="code" type="text">
+			</td>
+			<td style="display: flex; gap: 20px;">
+				<!-- <form>
+					<label class="label" for="copy-btn">
+						<img id="copy-btn" title="Copiar CUFE" class="imgClipBoard" src="imgs/clipboard.svg" alt="imagen de copiar un texto">
+					</label>
+					<button id="copy-btn" title="Copiar CUFE"></button>
+				</form> -->
+				<img id="copy-btn" title="Copiar CUFE" class="imgClipBoard" src="imgs/clipboard.svg" alt="imagen de copiar un texto">
+
+				<form action="/send" method="post" id="myForm">
+					<label class="label" for="btn-mysql">
+						<img title="D.B" class="mysql" src="imgs/mysql-svgrepo-com (1).svg" alt="">
+					</label>
+					<button id="btn-mysql" title="D.B"></button>
+				</form>
+			</td>
+		</form>		
+	</table>
+
+	<script src="script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	
+</body>
+</html>
